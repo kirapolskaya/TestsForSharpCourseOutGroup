@@ -4,9 +4,11 @@ namespace Lab1.HomeWorks
     /// Метод калькулятор
     /// Исходные условия: Метод принимает два числа и знак операции.
     /// </summary>
-    public class HomeWork3
+    public class Homework3
     {
-        /// <summary>
+       
+       
+        { /// <summary>
         /// Метод калькулятора
         /// </summary>
         /// <param name="x">Первый операнд</param>
@@ -14,8 +16,18 @@ namespace Lab1.HomeWorks
         /// <param name="mathOperation">Знак операции</param>
         /// <returns>Результат вычисления</returns>
         public static double Calculator(double x, double y, char mathOperation = '+')
+            {return x + y};
+             public static double Calculator(double x, double y, char mathOperation = '-')
+        {return x - y};
+        public static double Calculator(double x, double y, char mathOperation = '/')
+            {return x/y};
+        public static double Calculator(double x, double y, char mathOperation = '*')
+            {return x*y};
         {
-            throw new System.Exception("Не реализован калькулятор");
+            return Calculator(x, y, mathOperation);
+            ///throw new System.Exception("Не реализован калькулятор");
         }
     }
+
+
 }
