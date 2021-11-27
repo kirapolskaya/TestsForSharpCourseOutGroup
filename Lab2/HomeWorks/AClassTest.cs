@@ -1,8 +1,12 @@
 namespace Lab2.HomeWorks
 {
-
-    public abstract class AClassTest
-    {
-        public abstract string Print();
-    }
+   abstract class Abstract_Class
+{
+     
+    // Method declaration in abstract class
+    public abstract void abstract_method();
 }
+    }
+ 
+
+ 

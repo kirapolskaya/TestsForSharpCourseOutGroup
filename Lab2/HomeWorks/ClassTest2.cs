@@ -1,10 +1,21 @@
 namespace Lab2.HomeWorks
 {
-    public class ClassTest2
-    {
-        public string Print()
-        {
-            return "It is ClassTest2";
-        }
-    }
+   class Geeks{
+ 
+// Driver code
+public static void Main(String[] args)
+{
+     
+    // Creating objects
+    Abstract_Class ac = new GFG();
+    Interface inf = new GFG();
+     
+    // Calling the methods of abstract class
+    // and interface
+    ac.abstract_method();
+    inf.interface_method();
 }
+}
+    }
+
+
