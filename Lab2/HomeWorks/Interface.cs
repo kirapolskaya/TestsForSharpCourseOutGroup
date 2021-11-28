@@ -1,6 +1,6 @@
-interface Interface
+public interface Iprimary_care_doctor
 {
      
     // Method declaration in interface
-    void interface_method();
+    void provide_treatment();
 }

@@ -1,19 +1,20 @@
 namespace Lab2.HomeWorks
 {
-   class Geeks{
+   public class Visitor
+    {
  
-// Driver code
+
 public static void Main(String[] args)
 {
      
-    // Creating objects
-    Abstract_Class ac = new GFG();
-    Interface inf = new GFG();
+    
+    Person ac = new Patient();
+    Iprimary_care_doctor inf = new Patient();
      
-    // Calling the methods of abstract class
-    // and interface
-    ac.abstract_method();
-    inf.interface_method();
+    
+    
+    ac.get_treatment();
+    inf.provide_treatment();
 }
 }
     }

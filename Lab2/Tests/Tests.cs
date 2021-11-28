@@ -4,11 +4,11 @@ namespace Lab2.Tests
 {
     public class Tests
     {
-        [TestCase(new string[] { "Citizen", "Voter", "Statesman" }, 3)]
+        [TestCase(new string[] { "Person", "Patient", "Visitor" }, 3)]
         [("Убрать после реализации метода")]
         public void Test1(string[] verificationData, int count)
         {
-            struct[] objs = { new Citizen(), new Voter(), new Statesman() };
+            struct[] objs = { new Person(), new Patient(), new Visitor() };
             string[] tempString = new string[objs.Length];
             for (int i = 0; i < objs.Length; i++)
             {
@@ -17,11 +17,11 @@ namespace Lab2.Tests
              Assert.AreEqual(tempString, verificationData, "Данные реализованы не верно");
         }
 
-        [TestCase(new string[] { "CitizenInterface", "It is VoterInterface", "It is StatesmanInterface" }, 3)]
-        [("Убрать после реализации метода")]
+        [TestCase(new string[] { "ItsclasstestInterface", "ItsclasstestInterface", "ItsclasstestInterface" }, 3)]
+        
         public void Test2(string[] verificationData, int count)
         {
-             struct[] objs = { new Citizen(), new Voter(), new Statesman() };
+             struct[] objs = { new Person(), new Patient(), new Primary_care_doctor() };
             string[] tempString = new string[objs.Length];
              for (int i = 0; i < objs.Length; i++)
              {

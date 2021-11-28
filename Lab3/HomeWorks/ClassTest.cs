@@ -5,7 +5,15 @@ namespace Lab3.HomeWorks
     /// <summary>
     /// Класс для реализации метода сравнения объектов
     /// </summary>
-    public class ClassTest : IComparable
+    public class ClassTest : IComparable<Age>
+    {
+        [...]
+
+    public int CompareTo(Age that)
+    }
+    {return this.Age.CompareTo(that.Age);
+    }}
+    
     {
         private string name = "";
 
@@ -22,5 +30,14 @@ namespace Lab3.HomeWorks
         {
             throw new NotImplementedException();
         }
+        catch ( NotImplementedException )
+{
+    Console.WriteLine( "" );
+}
+catch ( Exception )
+{
+   
+   throw;
+}
     }
 }

@@ -1,18 +1,18 @@
 namespace Lab2.HomeWorks
 {
-   class GFG : Abstract_Class, Interface
+  public class Patient : Person, Iprimary_care_doctor
 {
      
-    // Method definition for abstract method
-    public override void abstract_method()
+    
+    public override void get_treatment()
     {
-        Console.WriteLine("I am the method of abstract class");
+        Console.WriteLine("Прошел курс лечения");
     }
      
-    // Method definition for interface
-    public void interface_method()
+    
+    public void provide_treatment()
     {
-        Console.WriteLine("I am the method of interface");
+        Console.WriteLine("Назначил курс лечения");
     }
 }
  
