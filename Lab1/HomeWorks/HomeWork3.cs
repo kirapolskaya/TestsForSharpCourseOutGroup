@@ -1,3 +1,5 @@
+using System;
+
 namespace Lab1.HomeWorks
 {
     /// <summary>
@@ -8,24 +10,24 @@ namespace Lab1.HomeWorks
     {
        
        
-        { /// <summary>
+        /// <summary>
         /// Метод калькулятора
         /// </summary>
         /// <param name="x">Первый операнд</param>
         /// <param name="y">Второй операнд</param>
         /// <param name="mathOperation">Знак операции</param>
         /// <returns>Результат вычисления</returns>
-        public static double Calculator(double x, double y, char mathOperation = '+')
-            {return x + y};
-             public static double Calculator(double x, double y, char mathOperation = '-')
-        {return x - y};
-        public static double Calculator(double x, double y, char mathOperation = '/')
-            {return x/y};
-        public static double Calculator(double x, double y, char mathOperation = '*')
-            {return x*y};
-        {
-            return Calculator(x, y, mathOperation);
-            ///throw new System.Exception("Не реализован калькулятор");
+        public static double Calculator(double x, double y, char mathOperation)
+        { 
+            switch (mathOperation)
+            {
+                case '+': return x + y;
+                case '-': return x - y;
+                case '*': return x * y;
+                case '/': return x / y;
+                default:
+                    throw new InvalidOperationException("Неверная операция");
+            }
         }
     }
 

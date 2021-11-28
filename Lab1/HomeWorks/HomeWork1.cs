@@ -13,37 +13,40 @@ namespace Lab1.HomeWorks
         /// <returns>Массив в котором поменяны местами максимальный отрицательный элемент и минимальный положительный</returns>
         public static int[] Variant1(int[] temp)
         {
-           int minValue ;
-                int maxValue;
-            for (int i = 1 ; i < temp.Length ; i++) { 
-                minValue = temp[0] ;
+            int minValue = 0;
+            int maxValue = 0;
+            for (int i = 1; i < temp.Length; i++)
+            {
+                minValue = temp[0];
 
-            if (minValue < temp[i]){
-                    minValue = temp [i]
-                        }
-            }
-            for (int i = 0 ; i < temp.Length ; i++) {
-               
-                    if(temp[i] >= 1 && maxValue < temp[i] )
-                    {
-                        maxValue = temp [i];
-                    }
-
+                if (minValue < temp[i])
+                {
+                    minValue = temp[i];
                 }
-            for (int i = 0 ;i < temp.Length ; i+) {
-                    if (temp[i] == minValue)
-                    {
-                        temp[i] = maxValue;
-                    }
-                    if (temp[i] = maxValue)
-                    {
-                        temp[i] = minValue;
-                    }
-             
+            }
+
+            for (int i = 0; i < temp.Length; i++)
+            {
+
+                if (temp[i] >= 1 && maxValue < temp[i])
+                {
+                    maxValue = temp[i];
+                }
+
+            }
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (temp[i] == minValue)
+                {
+                    temp[i] = maxValue;
+                }
+                if (temp[i] == maxValue)
+                {
+                    temp[i] = minValue;
+                }
+
             }
             return temp;
-            }
-        
         }
 
         /// <summary>
@@ -53,15 +56,15 @@ namespace Lab1.HomeWorks
         /// <returns>Сумма элементов, состоящих на чётных позициях массива</returns>
         public static int Variant2(int[] temp)
         {
-          int sum;
-        for (int i = 0 ; i < temp.Length ; i++) {
-            int i = temp[0];
-            if (i % 2 == 0)
-            {
-                sum += i;
-            }
-        }
-           return sum;
+            int sum = 0;
+            //for (int i = 0 ; i < temp.Length ; i++) {
+            //    int i = temp[0];
+            //    if (i % 2 == 0)
+            //    {
+            //        sum += i;
+            //    }
+            //}
+            return sum;
         }
 
         /// <summary>
@@ -71,14 +74,14 @@ namespace Lab1.HomeWorks
         /// <returns>Массив в котором поменяны отрицательные элементы на нули</returns>
         public static int[] Variant3(int[] temp)
         {
-          for (int i = 0 ; i < temp ; i++)
-        {
-            if(temp[i] < 0)
+            for (int i = 0; i < temp.Length; i++)
             {
-                temp[i] = 0;
+                if (temp[i] < 0)
+                {
+                    temp[i] = 0;
+                }
             }
-        }
-          return temp;
+            return temp;
         }
 
         /// <summary>
@@ -88,17 +91,17 @@ namespace Lab1.HomeWorks
         /// <returns>Массив в котором *3 каждый положительный элемент, который стоит перед отрицательным</returns>
         public static int[] Variant4(int[] temp)
         {
-        int positive;
-            for (int i = 1 ; i < temp ; i++)
-            positive = temp[i-1]; 
-        {
-            if (temp[i] < 0 && positive > 0)
+            int positive;
+            for (int i = 1; i < temp.Length; i++)
             {
-                temp[i-1] = temp[i-1] * 3
+                positive = temp[i - 1];
+                if (temp[i] < 0 && positive > 0)
+                {
+                    temp[i - 1] = temp[i - 1] * 3;
+                }
+
             }
-           
-        }
-        return temp;
+            return temp;
         }
 
         /// <summary>
@@ -108,25 +111,26 @@ namespace Lab1.HomeWorks
         /// <returns>Разница между средним арифметическим и значение минимального элемента</returns>
         public static double Variant5(int[] temp)
         {
-           int diff;
-        int minValue;
-        int avg;
+            int minValue;
+            int avg = 0;
 
-        for(int i = 0 ; i < temp.Length; i++) { 
-         minValue = temp[0] ;
+            for (int i = 0; i < temp.Length; i++)
+            {
+                minValue = temp[0];
 
 
-            if (minValue < temp[i]){
-                    minValue = temp [i]
-                        }
-            
+                if (minValue < temp[i])
+                {
+                    minValue = temp[i];
+                }
+
+            }
+            for (int i = 0; i < temp.Length; i++)
+            {
+                avg += temp[i];
+            }
+            int diff = (int)(avg / temp.Length);
+            return diff;
         }
-        for(int i = 0 ; i < temp.Length; i++)
-        {
-           avg += temp[i] ;
-        }
-        int diff = (int)(avg / temp.Length);
-        return diff;
     }
-
 }

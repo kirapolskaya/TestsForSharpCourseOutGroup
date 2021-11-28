@@ -13,35 +13,36 @@ namespace Lab1.HomeWorks
         /// <returns>Самая длинная строка, ее длина, самая маленькая трока и ее длина. Пример вывода return ("max1", 4, "min", 3);</returns>
         public static (string max, int lengthMax, string min, int lengthMin) Variant1(string[] temp)
         {
-        
-        string[] temp{ };
-        string lengthMin = [0];
-        string lengthMax = [0];
 
-      
-        foreach (string t in temp)
-        {
-            if (lengthMin.Length > t.Length)
-                lengthMin = t;
-            if (lengthMax.Length < t.Length)
-                lengthMax = t;
+            //string lengthMin = [0];
+            //string lengthMax = [0];
 
-           
+
+            //foreach (string t in temp)
+            //{
+            //    if (lengthMin.Length > t.Length)
+            //        lengthMin = t;
+            //    if (lengthMax.Length < t.Length)
+            //        lengthMax = t;
+
+
+            //}
+            //return lengthMin, lengthmin.Length, lengthMax, lenthmax.Length
+            return ("", 0, "", 0);
         }
-        return lengthMin, lengthmin.Length, lengthMax, lenthmax.Length
-        }
-        
-           
 
-      
 
-        /// <summary>
-        /// Найти слово, состоящее только из цифр. Если таких слов больше одного, найти второе из них
-        /// </summary>
-        /// <param name="temp">Исходный массив строк</param>
-        /// <returns>Слово состоящее только из цифр.</returns>
-        public static string Variant2(string[] temp)
-        {  string result;
+
+
+
+            /// <summary>
+            /// Найти слово, состоящее только из цифр. Если таких слов больше одного, найти второе из них
+            /// </summary>
+            /// <param name="temp">Исходный массив строк</param>
+            /// <returns>Слово состоящее только из цифр.</returns>
+            public static string Variant2(string[] temp)
+        {  
+            string result = null;
            foreach (string t in temp)
         {
                 if (isWordContainsDigitsOnly(t))
@@ -73,12 +74,9 @@ namespace Lab1.HomeWorks
                 {
                     return true;    
                 }
-	{
-
-	}
             }
+
+            return false;
         }
-    }
-}
     }
 }

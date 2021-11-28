@@ -1,8 +1,10 @@
 using System;
+using Lab1.HomeWorks;
 using NUnit.Framework;
 
 namespace Lab1.Tests
 {
+    [TestFixture]
     public class TestForHomeWork3
     {
         [TestCase(10, 10, "+", 20)]
@@ -12,13 +14,13 @@ namespace Lab1.Tests
         [TestCase(77, 0, "*", 0)]
         [TestCase(81, 9, "/", 9)]
        
-        public void TestForCalculator(double x, double y, char mathOperation, double temp) => Assert.AreEqual(HomeWorks.HomeWork3.Calculator(x, y, mathOperation), temp,
+        public void TestForCalculator(double x, double y, char mathOperation, double temp) => Assert.AreEqual(Homework3.Calculator(x, y, mathOperation), temp,
         "Калькулятор возвращает не верное значение");
 
         [TestCase(10, 0, "/")]
         [TestCase(77, 3, ")")]
         [Ignore("Убрать после реализации метода")]
-        public void TestForCalculatorNegativ(double x, double y, char mathOperation) => Assert.Throws<Exception>(delegate { HomeWorks.HomeWork3.Calculator(x, y, mathOperation); },
+        public void TestForCalculatorNegativ(double x, double y, char mathOperation) => Assert.Throws<Exception>(delegate { Homework3.Calculator(x, y, mathOperation); },
         "Калькулятор не возвращает исключение");
     }
 }

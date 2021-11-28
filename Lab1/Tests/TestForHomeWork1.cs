@@ -1,10 +1,11 @@
 using NUnit.Framework;
 
 namespace Lab1.Tests
-{
+{ 
+    [TestFixture]
     public class TestForHomeWork1
     {
-        [TestCase(new int[] { 1, -10, 3, 4, -8, 20, 7, 43, -15, -9af }, new int[] { -15, -10, 3, 4, -8, 20, 7, 43, 1, -9 })]
+        [TestCase(new int[] { 1, -10, 3, 4, -8, 20, 7, 43, -15, -9 }, new int[] { -15, -10, 3, 4, -8, 20, 7, 43, 1, -9 })]
         [TestCase(new int[] { 1, 10, 3, 4, 8, 20, 7, 43, 15, 9 }, new int[] { 1, 10, 3, 4, 8, 20, 7, 43, 15, 9 })]
         [TestCase(new int[] { -1, -10, -3, -4, -8, -20, -7, -43, -15, -9 }, new int[] { -1, -10, -3, -4, -8, -20, -7, -43, -15, -9 })]
         
